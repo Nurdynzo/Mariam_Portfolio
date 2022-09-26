@@ -231,33 +231,19 @@ h3{font-size: var(--fs-h3);}
 .nav__list,
 .nav__link{
     display: flex;
-    
 }
 
 .nav__link{
     flex-direction: column;
     align-items: center;
-    
+    row-gap: .25rem;
     color: var(--clr-dark);
     font-weight: 600;
 
 }
 
-.blog__name{
-    color: white;
-}
-
-.blog-link{
-    background-color: black;
-    border-radius: 5px;
-    margin: -5px;
-    padding: 5px 25px;
-}
-
 .nav__list{
     justify-content: space-around;
-    
-    padding: 0;
 }
 
 .nav__name{
@@ -299,6 +285,9 @@ h3{font-size: var(--fs-h3);}
         font-weight: 200;
     
     }
+
+   
+   
 } 
 
 
@@ -309,6 +298,8 @@ h3{font-size: var(--fs-h3);}
         justify-content: center;
         column-gap: 3rem;
     }
+
+    
 } 
 
 @media screen and (min-width: 767px){
@@ -454,6 +445,193 @@ h3{font-size: var(--fs-h3);}
     }
 }
 
+
+
+
+
+/* My Post */
+
+.my-post{
+    background-color: var(--clr-dark);
+    background-blend-mode: overlay;
+    background-image: url(/img/jess-bailey-q10VITrVYUM-unsplash.jpg);
+    background-size: cover;
+    color: var(--clr-light);
+    text-align: center;
+    padding: 1em;
+    padding-top: 2em;
+}
+
+.post{
+    margin-bottom: 1em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1000px) {
+    .post {
+        display: flex;
+        justify-content: center;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service + .service {
+        margin-left: 2rem;
+    }
+
+    
+}
+
+
+.card {
+    overflow: hidden;
+    box-shadow: 0px 2px 20px #d7dfe2; /* Card outline shadow */
+  background: white; /* post background color */
+  border-radius: 0.5rem;
+    position: relative;
+    margin: 1rem;
+    transition: 250ms all ease-in-out;
+    cursor: pointer;
+    min-width: 18rem;
+    
+  }
+
+  /* .card:hover {  
+    transform: scale(1.05);
+    box-shadow: 0px 2px 40px #d7dfe2;
+  } */
+
+  /*Design banner image*/
+.banner-img {
+    position: absolute;
+    object-fit: cover;
+    height: 14rem; /* image height */
+    width: 100%;
+  }
+
+
+  /* Design catagory text */
+.category-tag {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white; /* text color */
+    background: red;  /* text background color */
+    padding: 0.5rem 1.3rem 0.5rem 1rem;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    border-radius: 0 2rem 2rem 0;
+  }
+
+  .card-body {
+    margin: 15rem 1rem 1rem 1rem;
+  }
+
+
+  .blog-title {
+    line-height: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: var(--clr-accent);
+    font-size: var(--normal-font-size);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .blog-description {
+    color: var(--clr-dark);
+    font-size: 0.9rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+
+  .more-menu {
+    font-size: var(--body-font);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transition-delay: 0.4s;
+    margin-right: 5rem;
+    color: var(--clr-light);
+    }
+    
+    
+  
+
+    .svg {
+        font-size: 28px;
+        margin-left: 10px;
+    }
+
+  
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+.btn-13 {
+  background-color: #89d8d3;
+background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+  border: none;
+  z-index: 1;
+  margin: 20px;
+}
+.btn-13:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+   background-color: #4dccc6;
+background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.btn-13:hover {
+  color: #fff;
+}
+.btn-13:hover:after {
+  top: 0;
+  height: 100%;
+}
+.btn-13:active {
+  top: 2px;
+}
+
+
+
 .about-me{
     max-width: 1000px;
     margin: 0 auto;
@@ -488,6 +666,7 @@ h3{font-size: var(--fs-h3);}
         position: relative;
         z-index: 2;
     }
+    
 }
 
 
